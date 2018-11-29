@@ -61,7 +61,7 @@ int char_to_int(int n, char *str){
 }
 
 //converts integer into string
-void int_to_char(long long int val, char *string){
+void int_to_char(long long int val, char *str){
 	int n[BIT], i=0;
 	do{
 		n[i]=val%10;
@@ -75,10 +75,10 @@ void int_to_char(long long int val, char *string){
 	}
 
 	for(int j=BIT-2; j>=0; j--){
-		*string=n[j]+48;
-		string++;
+		*str=n[j]+48;
+		str++;
 	}
-	*string='\0';
+	*str='\0';
 }
 
 //compares two strings. returns 1 if they are equal, otherwise 0
@@ -265,8 +265,8 @@ void find_address_symb(list* head, char *str){
 	}
 }
 
-//makes exchange of strings
-void exchange(char *str1, char *str2){
+//swaps two strings
+void swap(char *str1, char *str2){
 	while(*str2!='\0'){
 		*str1=*str2;
 		str1++;
@@ -310,7 +310,7 @@ void c_instr(char *str){
 			copy_comp(aux2, aux_c);
 			copy_dest(aux1, aux_c);
 			strcat(aux_c, "000");
-			exchange(str, aux_c);
+			swap(str, aux_c);
 		}
 		
 		//comp;jump
@@ -328,8 +328,7 @@ void c_instr(char *str){
 			copy_comp(aux1, aux_c);
 			strcat(aux_c, "000");
 			copy_jump(aux2, aux_c);
-
-			exchange(str, aux_c);
+			swap(str, aux_c);
 		}
 
 		aux1[i]=*tmp;
