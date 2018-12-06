@@ -12,6 +12,6 @@ Run
 	make
 
 Then execute
-	./main	file_to_read.asm file_to_convert.hack
+	./assembler file_to_read.asm file_to_convert.hack
 	
 The names of files .asm and hack. should be the same.
