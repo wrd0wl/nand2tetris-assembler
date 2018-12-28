@@ -1,4 +1,3 @@
-# nand2teris-assembler
 README FOR LINUX USERS
 
 This is one of my first projects, so the code may not be well readable. But it works!
@@ -10,6 +9,8 @@ Type
 
 Run
 	make
+
+Put .asm files to the directory with the source code.
 
 Then execute
 	./assembler file_to_read.asm file_to_convert.hack
